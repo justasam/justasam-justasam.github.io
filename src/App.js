@@ -11,6 +11,8 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <div className="gradient-top" />
+        <div className="gradient-bot" />
         <Header />
         <Sidebar />
         <Footer />
