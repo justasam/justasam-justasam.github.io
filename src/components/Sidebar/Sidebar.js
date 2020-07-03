@@ -6,8 +6,8 @@ import './index.css';
 export default () => {
     return (
         <div className='sidebar'>
-            <NavLink to='/' activeClassName='active' exact>WORK</NavLink>
-            <NavLink to='/about' activeClassName='active' exact>ABOUT</NavLink>
+            <NavLink data-hoverable="true" to='/' activeClassName='active' exact>WORK</NavLink>
+            <NavLink data-hoverable="true" to='/about' activeClassName='active' exact>ABOUT</NavLink>
         </div>
     )
 }

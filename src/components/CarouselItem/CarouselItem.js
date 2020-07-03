@@ -12,7 +12,10 @@ const CarouselItem = ({
 }) => {
 
     return (
-        <div className={`carousel carousel-${position}`}>
+        <div
+            data-hoverable={position === 'center' ? 'true' : 'false'}
+            className={`carousel carousel-${position}`}
+        >
             <div className='text'>
                 <div className='title'>
                     <h1>{title}<span className='outline'>{title}</span></h1>

@@ -17,7 +17,8 @@
 
 /* Hover effects */
 .carousel-center:hover .carousel-image p {
-  opacity: 0.8;
+  /* opacity: 0.8; when detail page done */
+  opacity: 0;
 }
 .carousel-center:hover {
   transform: translateY(-50%) scale(1.05);
