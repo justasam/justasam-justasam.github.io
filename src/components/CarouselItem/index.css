@@ -1,0 +1,150 @@
+.carousel {
+  position: absolute;
+  left: 17%;
+  right: 5%;
+}
+
+.carousel-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 50vh;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.15s ease-in;
+}
+
+/* Hover effects */
+.carousel-center:hover .carousel-image p {
+  opacity: 0.8;
+}
+.carousel-center:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+.carousel-center:hover .carousel-image {
+  transform: scale(1.1) translateX(-8%);
+  background-color: transparent;
+}
+.carousel-center:hover .carousel-image::after {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0)
+  );
+  mix-blend-mode: normal;
+}
+
+/* Carousel text styling */
+.carousel-info {
+  display: none;
+  margin: 20px 0;
+  font-size: 14px;
+  z-index: 10;
+}
+.carousel-info p {
+  margin-bottom: 20px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 40%;
+  height: 100%;
+}
+
+.title {
+  position: relative;
+  font-family: "IBM Plex Sans";
+  font-weight: bold;
+  width: 60vw;
+}
+.title h1 {
+  position: relative;
+  line-height: 100%;
+  font-size: 6vw;
+  color: transparent;
+}
+
+.title .outline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  z-index: 5;
+}
+
+/* Duotone carousel image styling */
+.carousel-image {
+  display: none;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 131, 122);
+  transition: transform 0.15s ease-in;
+}
+
+.carousel-image img {
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  mix-blend-mode: multiply;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-image::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  mix-blend-mode: lighten;
+  background-color: rgb(22, 0, 111);
+  content: "";
+}
+
+.carousel-image p {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 8;
+  margin: 20px;
+  font-weight: bold;
+  -webkit-text-stroke: 0.5px white;
+  color: transparent;
+  font-size: 28px;
+  opacity: 0;
+  transition: all 0.1s;
+}
+
+/* specific styling dependant on whether carousel is center/bot/top */
+.carousel-center .carousel-image,
+.carousel-center .carousel-info {
+  display: initial;
+}
+
+.carousel-center .title h1 {
+  color: #ffffff;
+}
+
+.carousel-top {
+  top: 0;
+  transform: translateY(-30%);
+  z-index: -1;
+}
+
+.carousel-bot {
+  bottom: 0;
+  transform: translateY(30%);
+  z-index: -1;
+}
+
+.carousel-top .title, .carousel-bot .title {
+  opacity: 0.2;
+  width: 70vw;
+}
