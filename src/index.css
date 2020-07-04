@@ -23,6 +23,7 @@ body {
   padding: 0;
   cursor: none;
   pointer-events: none;
+  -webkit-user-select: none;
 }
 
 a {

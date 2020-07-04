@@ -9,7 +9,7 @@
 }
 
 .idle .carousel-image {
-  transition: transform 0.15s ease-in;
+  transition: transform 0.2s ease-in;
 }
 
 .idle .carousel-image p {

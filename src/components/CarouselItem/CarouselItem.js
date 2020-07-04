@@ -13,6 +13,8 @@ const CarouselItem = ({
 
     const [status, setStatus] = useState('idle');
 
+    if (position !== 'center' && status !== 'idle') setStatus('idle');
+
     return (
         <div
             data-hoverable={position === 'center' ? 'true' : 'false'}
