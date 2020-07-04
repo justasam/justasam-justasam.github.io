@@ -2,6 +2,7 @@
   position: absolute;
   left: 17%;
   right: 5%;
+  transition: all 0.2s ease-in;
 }
 
 .carousel-center {
@@ -12,7 +13,6 @@
   height: 50vh;
   top: 50%;
   transform: translateY(-50%);
-  transition: all 0.15s ease-in;
 }
 
 /* Hover effects */
@@ -21,7 +21,7 @@
   opacity: 0;
 }
 .carousel-center:hover {
-  transform: translateY(-50%) scale(1.05);
+  transform: translateY(-50%) scale(1.08);
 }
 .carousel-center:hover .carousel-image {
   transform: scale(1.1) translateX(-8%);
@@ -29,6 +29,13 @@
 
 .carousel-center:hover .carousel-image img {
   filter: brightness(0.7);
+}
+
+.carousel-center:hover ~ .carousel-bot {
+  transform: translateY(100%) ;
+}
+.carousel-center:hover ~ .carousel-top {
+  transform: translateY(-100%) ;
 }
 /* .carousel-center:hover .carousel-image::after {
   background: linear-gradient(

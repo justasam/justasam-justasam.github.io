@@ -11,7 +11,7 @@ body {
 
   background-color: black;
 
-  /* Credits to Cassi Josh @ unsplash */
+  /* Credits to @pawel_czerwinski - unsplash */
   background-image: url(./background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -51,4 +51,11 @@ a {
   height: 200px;
   z-index: -1;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
