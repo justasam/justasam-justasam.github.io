@@ -2,8 +2,20 @@
   position: absolute;
   left: 17%;
   right: 5%;
+}
+
+.carousel.idle {
   transition: all 0.2s ease-in;
 }
+
+.idle .carousel-image {
+  transition: transform 0.15s ease-in;
+}
+
+.idle .carousel-image p {
+  transition: all 0.1s;
+}
+
 
 .carousel-center {
   display: flex;
@@ -16,25 +28,25 @@
 }
 
 /* Hover effects */
-.carousel-center:hover .carousel-image p {
+.carousel-center.idle:hover .carousel-image p {
   /* opacity: 0.8; when detail page done */
   opacity: 0;
 }
-.carousel-center:hover {
+.carousel-center.idle:hover {
   transform: translateY(-50%) scale(1.08);
 }
-.carousel-center:hover .carousel-image {
+.carousel-center.idle:hover .carousel-image {
   transform: scale(1.1) translateX(-8%);
 }
 
-.carousel-center:hover .carousel-image img {
+.carousel-center.idle:hover .carousel-image img {
   filter: brightness(0.7);
 }
 
-.carousel-center:hover ~ .carousel-bot {
+.carousel-center.idle:hover ~ .carousel-bot {
   transform: translateY(100%) ;
 }
-.carousel-center:hover ~ .carousel-top {
+.carousel-center.idle:hover ~ .carousel-top {
   transform: translateY(-100%) ;
 }
 /* .carousel-center:hover .carousel-image::after {
@@ -94,7 +106,6 @@
   position: relative;
   height: 100%;
   width: 100%;
-  transition: transform 0.15s ease-in;
 }
 
 .carousel-image img {
@@ -117,7 +128,6 @@
   color: transparent;
   font-size: 28px;
   opacity: 0;
-  transition: all 0.1s;
 }
 
 /* specific styling dependant on whether carousel is center/bot/top */
@@ -145,4 +155,24 @@
 .carousel-top .title, .carousel-bot .title {
   opacity: 0.25;
   width: 70vw;
+}
+
+.carousel.clicked .text {
+  display: none;
+}
+.carousel.clicked {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transform: none;
+  background-color: rgba(0,0,0,.5);
+}
+.carousel.clicked img {
+  width: auto;
+  max-width: 90%;
+  object-fit: contain;
+  filter: none;
+  left: 50%;
+  transform: translateX(-50%);
 }

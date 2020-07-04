@@ -45,29 +45,12 @@ const throttled = (delay, fn) => {
     }
 }
 
-// function to debounce
-
-const debounced = (delay, fn) => {
-    let timerId;
-    return function (...args) {
-        if (timerId) {
-            clearTimeout(timerId);
-        }
-        timerId = setTimeout(() => {
-            fn(...args);
-            timerId = null;
-        }, delay);
-    }
-}
-
-
 const positions = [
     'center',
     'top',
     'bot'
 ];
 
-let lastScrollTop = 0;
 
 export default () => {
     const [work, setWork] = useState([]);

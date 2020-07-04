@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types';
 
 import './index.css';
@@ -11,10 +11,13 @@ const CarouselItem = ({
     date
 }) => {
 
+    const [status, setStatus] = useState('idle');
+
     return (
         <div
             data-hoverable={position === 'center' ? 'true' : 'false'}
-            className={`carousel carousel-${position}`}
+            className={`carousel carousel-${position} ${status}`}
+            onClick={() => setStatus(s => s === 'idle' ? 'clicked' : 'idle')}
         >
             <div className='text'>
                 <div className='title'>
