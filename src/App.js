@@ -4,8 +4,10 @@ import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import Cursor from './components/Cursor';
 
-import { BrowserRouter as Router } from 'react-router-dom';
+import About from './pages/About';
 import Work from './pages/Work';
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -17,7 +19,14 @@ function App() {
         <Sidebar />
         <Footer />
         <Cursor />
-        <Work />
+        <Switch>
+          <Route path="/about" exact>
+            <About />
+          </Route>
+          <Route path="/">
+            <Work />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import CarouselItem from '../components/CarouselItem/CarouselItem';
+import CarouselItem from '../../components/CarouselItem/CarouselItem';
 
 const contentful = require('contentful');
 

@@ -1,0 +1,45 @@
+.about {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  max-height: 80vh;
+  font-size: 16px;
+  position: absolute;
+  font-family: "IBM Plex Sans Condensed";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  overflow: auto;
+  pointer-events: initial;
+}
+
+
+.about h4 {
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.about > div {
+  width: 50%;
+}
+
+.about .info {
+  padding: 30px;
+}
+
+.about a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.about ul {
+  list-style-type: none;
+}
+
+.about p,
+.about ul {
+  line-height: 1.4em;
+}
