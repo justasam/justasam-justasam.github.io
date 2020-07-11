@@ -1,0 +1,27 @@
+.chevron {
+  pointer-events: initial;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+
+  & > * {
+    opacity: 0.5;
+  }
+  &:hover > * {
+    opacity: 1;
+  }
+
+  &.next {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  }
+  &.prev {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  }
+}

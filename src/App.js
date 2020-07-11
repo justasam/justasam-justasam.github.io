@@ -7,9 +7,12 @@ import Cursor from './components/Cursor';
 import About from './pages/About';
 import Work from './pages/Work';
 
+import { useMediaQuery } from 'react-responsive'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
+  const isMobile = useMediaQuery({ maxWidth: 1000 });
+
   return (
     <Router>
       <div className="App">
@@ -18,13 +21,14 @@ function App() {
         <Header />
         <Sidebar />
         <Footer />
-        <Cursor />
+
+        {!isMobile && <Cursor />}
         <Switch>
           <Route path="/about" exact>
             <About />
           </Route>
           <Route path="/">
-            <Work />
+            <Work isMobile={isMobile} />
           </Route>
         </Switch>
       </div>

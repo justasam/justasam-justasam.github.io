@@ -1,7 +1,7 @@
 import React from 'react'
 import { GitHub, Mail, Linkedin } from 'react-feather';
 
-import './index.css';
+import './index.scss';
 
 export default () => {
 

@@ -21,16 +21,11 @@ body {
 * {
   margin: 0;
   padding: 0;
-  cursor: none;
   pointer-events: none;
   -webkit-user-select: none;
 }
 
 a {
-  pointer-events: initial;
-}
-
-.carousel {
   pointer-events: initial;
 }
 

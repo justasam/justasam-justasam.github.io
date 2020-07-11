@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
-import './index.css';
+import './index.scss';
 
 export default () => {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+
 
     const updateOnMove = (ev) => {
         setMousePos({
@@ -19,7 +20,7 @@ export default () => {
         return () => {
             window.removeEventListener('mousemove', updateOnMove)
         }
-    }, [])
+    }, []);
 
     return (
         <React.Fragment>

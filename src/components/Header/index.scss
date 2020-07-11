@@ -1,0 +1,48 @@
+.header {
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-family: "IBM Plex Sans Condensed";
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 160px;
+    height: 20px;
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      opacity: 0.6;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    padding: 20px;
+
+    .social {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
