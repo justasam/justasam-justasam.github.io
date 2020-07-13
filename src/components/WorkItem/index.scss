@@ -10,7 +10,6 @@ $font_title: 6vw;
   max-height: calc(100% - 240px);
   transform: translateY(-50%);
   transition: transform 0.15s ease-in;
-  pointer-events: initial;
 
   &:hover {
     transform: translateY(-50%) scale(1.05);
