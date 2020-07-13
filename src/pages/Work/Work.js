@@ -68,7 +68,7 @@ export default ({ isMobile }) => {
                     <WorkItem
                         title={`${curr}: ${work[curr].title}`}
                         description={work[curr].description}
-                        date={work[curr].date.split('T')[0]}
+                        date={work[curr].date && work[curr].date.split('T')[0]}
                         images={work[curr].images.map(img => getImg(img))}
                         key={curr}
                     />
