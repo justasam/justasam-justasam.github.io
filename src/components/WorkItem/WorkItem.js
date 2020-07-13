@@ -26,8 +26,12 @@ const WorkItem = ({
                             <span className='outline'>{title}</span>
                         </h1>
                         <div className='info'>
-                            <p className='desc'>{description}</p>
-                            <p className='date'>{date}</p>
+                            <p className='desc'>
+                                {description.split('\n').map((item, key) => {
+                                    return <span key={key}>{item}<br /></span>
+                                })}
+                            </p>
+                            {date && <p className='date'>{date}</p>}
                         </div>
                     </div>
 
@@ -44,7 +48,7 @@ WorkItem.propTypes = {
     title: PropTypes.string.isRequired,
     images: PropTypes.array.isRequired,
     description: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired
+    date: PropTypes.string
 }
 
 export default WorkItem;
