@@ -2,7 +2,6 @@ import React from 'react';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
-import Cursor from './components/Cursor';
 
 import About from './pages/About';
 import Work from './pages/Work';
@@ -22,7 +21,6 @@ function App() {
         <Sidebar />
         <Footer />
 
-        {!isMobile && <Cursor />}
         <Switch>
           <Route path="/about" exact>
             <About />
