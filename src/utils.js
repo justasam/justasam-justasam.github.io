@@ -44,15 +44,19 @@ const getImg = (img) => {
 
 const preloadImages = async (items) => {
     let promises = items.map(({ images }) => {
-        let image = new Image();
-        image.src = getImg(images[0]);
 
-        return new Promise((res, _) => {
-            image.onload = () => {
-                image.remove();
-                res();
-            }
-        });
+        return images.map((img) => {
+            let image = new Image();
+            image.src = getImg(img);
+
+            return new Promise((res, _) => {
+                image.onload = () => {
+                    image.remove();
+                    res();
+                }
+            });
+        })
+
     });
 
     return Promise.all(promises);
